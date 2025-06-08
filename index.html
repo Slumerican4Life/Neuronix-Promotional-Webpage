@@ -16,40 +16,42 @@
       --pink: #ff69b4;
       --green: #00ffcc;
       --silver: #c0c0c0;
+      --gold: gold;
+      --platinum: #e5e4e2;
+      --neon-green: #39ff14;
     }
 
     body {
       margin: 0;
       font-family: 'Playfair Display', serif;
-      background: linear-gradient(135deg, var(--black), var(--deep-blue));
+      background: linear-gradient(135deg, var(--deep-blue), var(--purple));
       color: var(--silver);
     }
 
     header {
       text-align: center;
-      background: linear-gradient(to right, var(--deep-red), var(--purple));
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 0.5rem;
       position: relative;
+      background: linear-gradient(to right, var(--deep-red), var(--purple));
     }
 
-    header img.logo-small {
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-      height: 60px;
+    header .studio-title {
+      font-size: 2rem;
+      color: var(--gold);
+      font-weight: bold;
+      text-shadow: 0 0 5px var(--gold), 0 0 10px var(--platinum);
     }
 
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-      color: var(--silver);
-      letter-spacing: 2px;
+    header .studio-title::before,
+    header .studio-title::after {
+      content: url("slumbucket logo.png");
+      margin: 0 1rem;
+      vertical-align: middle;
     }
 
     .hero {
-      display: flex;
-      justify-content: center;
-      padding: 2rem;
+      text-align: center;
+      padding: 1rem;
     }
 
     .hero img {
@@ -57,112 +59,133 @@
       max-width: 90%;
     }
 
-    .projects {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--silver);
+      margin-bottom: 0.5rem;
+    }
+
+    .click-invite {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--neon-green);
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       padding: 2rem;
     }
 
     .project {
-      background: linear-gradient(145deg, var(--light-blue), var(--pink));
-      border-radius: 20px;
-      overflow: hidden;
-      width: clamp(300px, 30vw, 400px);
       text-align: center;
-      box-shadow: 0 0 10px var(--black);
-      transition: transform 0.3s ease;
-    }
-
-    .project:hover {
-      transform: scale(1.05);
-    }
-
-    .project a {
-      text-decoration: none;
-      color: inherit;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 1rem;
     }
 
     .project img {
       width: 100%;
-      height: auto;
+      max-width: 300px;
+      border-radius: 12px;
     }
 
     .project h2 {
+      font-family: 'Playfair Display', serif;
       font-size: 1.4rem;
-      margin: 0.5rem 0 0;
-      font-family: 'Roboto Mono', monospace;
-      color: var(--black);
+      color: var(--gold);
+      margin: 0.5rem 0;
     }
 
     .project p {
-      padding: 0 1rem 1rem;
-      font-size: 0.95rem;
-      color: var(--black);
+      font-size: 0.9rem;
+      color: var(--silver);
+      margin: 0;
     }
 
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-family: 'Roboto Mono', monospace;
-      background-color: var(--deep-blue);
-      color: var(--silver);
+    .click-invite-small {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--neon-green);
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="slumbucket logo.png" class="logo-small" alt="Slumbucket Studios">
-    <h1>Neuronix Brought to You by Slumbucket Studios</h1>
+    <div class="studio-title">by: SLUMBUCKET STUDIOS</div>
   </header>
 
   <div class="hero">
-   <img src="neuronix-logo-detailed (2).png" alt="Neuronix main Logo">
+    <img src="neuronix-main.png" alt="Neuronix Main Logo">
+    <h1>Neuronix</h1>
+    <div class="click-invite">click me, come inside ➤</div>
   </div>
 
-  <section class="projects">
+  <div class="grid">
     <div class="project">
-      <a href="#">
-        <img src="auto-ai-systems.png" alt="Auto AI Systems">
-        <h2>Auto A.I. Systems</h2>
-        <p>Modular automation tools powered by intelligent neural cores.</p>
+      <a href="#secondlife-connect">
+        <img src="secondlife-connect.png" alt="Secondlife-Connect">
       </a>
+      <h2>Secondlife-Connect</h2>
+      <p>Social Media for Your Second Life</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
     </div>
 
     <div class="project">
-      <a href="#">
-        <img src="whirl.png" alt="Whirl-Win">
-        <h2>Whirl-Win</h2>
-        <p>A fierce video battle platform for creators, powered by token logic.</p>
+      <a href="#whirl-win">
+        <img src="whirl-win.png" alt="Whirl-Win">
       </a>
+      <h2>Whirl-Win</h2>
+      <p>Video Battle Platform – Illuminating the Truth + Slumerican Dirt Road</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
     </div>
 
     <div class="project">
-      <a href="#">
+      <a href="#memesmith">
         <img src="memesmith-logo.png" alt="MemeSmith">
-        <h2>MemeSmith</h2>
-        <p>Generate powerful, culture-driven memes through smart satire AI.</p>
       </a>
+      <h2>MemeSmith</h2>
+      <p>High-Vibration Memes + AI Satire</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
     </div>
 
     <div class="project">
-      <a href="#">
-       <img src="neuronix ai file recovery systems logo stripe logic.png" alt="Neuronix File Recovery AI">
-        <h2>Neuronix Recovery AI</h2>
-        <p>Emotion-driven file recovery assistant that fights to bring your data back.</p>
+      <a href="#recovery">
+        <img src="neuronix-recovery.png" alt="Neuronix File Recovery AI">
       </a>
+      <h2>Neuronix Advanced A.I. File & Media Recovery</h2>
+      <p>Guided by Lyra</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
     </div>
 
     <div class="project">
-      <a href="#">
+      <a href="#linguista">
+        <img src="linguista.png" alt="Linguista">
+      </a>
+      <h2>Linguista A.I.</h2>
+      <p>Contextual Translations</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#auto-ai">
+        <img src="auto-ai-systems.png" alt="Auto AI Systems">
+      </a>
+      <h2>Auto A.I. Business Solutions</h2>
+      <p>Modular Automation with Scalable Workflows</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#lyra">
         <img src="lyra-guardian.png.png" alt="Lyra Guardian AI">
-        <h2>Lyra Guardian A.I.</h2>
-        <p>Emotionally intelligent assistant that learns, adapts, and supports.</p>
       </a>
+      <h2>Lyra Guardian A.I.</h2>
+      <p>Autonomous Emotional Agent</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
     </div>
-
-    <div class="project">
-      <a href="#">
-        <img src="secondlife-connect.png" alt="Secondlife Connect">
-        <h2>Se
+  </div>
+</body>
+</html>
