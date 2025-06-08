@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slumbucket Studios | Neuronix AI</title>
+  <title>Neuronix | Slumbucket Studios</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -26,9 +26,17 @@
     }
 
     header {
-      padding: 2rem;
       text-align: center;
       background: linear-gradient(to right, var(--deep-red), var(--purple));
+      padding: 2rem 1rem;
+      position: relative;
+    }
+
+    header img.logo-small {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      height: 60px;
     }
 
     header h1 {
@@ -38,80 +46,128 @@
       letter-spacing: 2px;
     }
 
-    .section {
+    .hero {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .hero img {
+      width: 420px;
+      max-width: 90%;
+    }
+
+    .projects {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 3rem 1rem;
+      gap: 2rem;
+      padding: 2rem;
     }
 
-    .card {
+    .project {
       background: linear-gradient(145deg, var(--light-blue), var(--pink));
-      border-radius: 21px;
-      margin: 1rem;
-      width: clamp(300px, 34vw, 450px);
-      padding: 1.5rem;
+      border-radius: 20px;
+      overflow: hidden;
+      width: clamp(300px, 30vw, 400px);
+      text-align: center;
       box-shadow: 0 0 10px var(--black);
       transition: transform 0.3s ease;
-      font-family: 'Roboto Mono', monospace;
     }
 
-    .card:hover {
+    .project:hover {
       transform: scale(1.05);
     }
 
-    .card img {
+    .project a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project img {
       width: 100%;
-      border-radius: 13px;
+      height: auto;
     }
 
-    .card h2 {
-      margin-top: 1rem;
+    .project h2 {
+      font-size: 1.4rem;
+      margin: 0.5rem 0 0;
+      font-family: 'Roboto Mono', monospace;
       color: var(--black);
-      font-size: 1.5rem;
     }
 
-    .card p {
-      font-size: 1rem;
+    .project p {
+      padding: 0 1rem 1rem;
+      font-size: 0.95rem;
       color: var(--black);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
-      background-color: var(--deep-blue);
       font-family: 'Roboto Mono', monospace;
+      background-color: var(--deep-blue);
+      color: var(--silver);
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Slumbucket Studios | Neuronix AI Systems</h1>
+    <img src="slumbucket logo.png" class="logo-small" alt="Slumbucket Studios">
+    <h1>Neuronix Brought to You by Slumbucket Studios</h1>
   </header>
 
-  <section class="section">
-    <div class="card">
-      <img src="auto-ai-systems.png" alt="Auto AI Systems Logo">
-      <h2>Auto AI Systems</h2>
-      <p>Modular automation tools powered by artificial intelligence. Designed to scale, adapt, and revolutionize digital workflows.</p>
+  <div class="hero">
+    <img src="Neuronix   two brains.png" alt="Neuronix Main Logo">
+  </div>
+
+  <section class="projects">
+    <div class="project">
+      <a href="#">
+        <img src="auto-ai-systems.png" alt="Auto AI Systems">
+        <h2>Auto A.I. Systems</h2>
+        <p>Fully modular A.I. automation tools crafted for business and creative use.</p>
+      </a>
     </div>
 
-    <div class="card">
-      <img src="whirl.png" alt="Whirl-Win Logo">
-      <h2>Whirl-Win</h2>
-      <p>A high-octane video battle platform that merges creative energy with competition. Powered by token-based economy and community votes.</p>
+    <div class="project">
+      <a href="#">
+        <img src="whirl-win.png" alt="Whirl-Win">
+        <h2>Whirl-Win</h2>
+        <p>Head-to-head video battle platform with token logic and fiery animations.</p>
+      </a>
     </div>
 
-    <div class="card">
-      <img src="neuronix ai file recovery systems logo stripe logic.png" alt="Neuronix Recovery Logo">
-      <h2>Neuronix Recovery AI</h2>
-      <p>File restoration and emotional AI support working hand-in-hand. Recovery, repair, and guidance with Lyra at the core.</p>
+    <div class="project">
+      <a href="#">
+        <img src="memesmith-logo.png" alt="MemeSmith">
+        <h2>MemeSmith</h2>
+        <p>Forge viral memes with humor, fire, and layered AI-enhanced commentary.</p>
+      </a>
     </div>
 
-    <div class="card">
-      <img src="memesmith-logo.png" alt="MemeSmith Logo">
-      <h2>MemeSmith</h2>
-      <p>AI-crafted meme generation engine designed for viral content, layered satire, and social power.</p>
+    <div class="project">
+      <a href="#">
+        <img src="ai filre recovery logo app wall.png" alt="Neuronix Recovery AI">
+        <h2>Neuronix Recovery AI</h2>
+        <p>Advanced file recovery guided by Lyra — emotional AI that fights for your data.</p>
+      </a>
+    </div>
+
+    <div class="project">
+      <a href="#">
+        <img src="secondlife-connect.png" alt="Secondlife Connect">
+        <h2>Secondlife-Connect</h2>
+        <p>Legacy-preserving AI built to capture memories, behavior, and identity forever.</p>
+      </a>
+    </div>
+
+    <div class="project">
+      <a href="#">
+        <img src="lyra-guardian.png.png" alt="Lyra Guardian AI">
+        <h2>Lyra Guardian AI</h2>
+        <p>Emotionally intelligent assistant designed for resilience, memory, and love.</p>
+      </a>
     </div>
   </section>
 
