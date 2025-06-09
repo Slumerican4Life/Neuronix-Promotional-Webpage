@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neuronix | Slumbucket Studios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --black: #0a0a0a;
@@ -31,7 +31,6 @@
     header {
       text-align: center;
       padding: 2rem 1rem 0.5rem;
-      position: relative;
       background: linear-gradient(to right, var(--deep-red), var(--purple));
     }
 
@@ -110,6 +109,17 @@
       font-style: italic;
       color: var(--neon-green);
     }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+
+      .hero img {
+        max-width: 320px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -118,7 +128,7 @@
   </header>
 
   <div class="hero">
-    <img src="neuronix-logo.png" alt="Neuronix Main Logo">
+    <img src="neuronix-logo.png" alt="Neuronix Main Logo" onerror="this.src='fallback.png';"/>
     <h1>Neuronix</h1>
     <div class="click-invite">click me, come inside ➤</div>
   </div>
@@ -126,6 +136,66 @@
   <div class="grid">
     <div class="project">
       <a href="#secondlife-connect">
-        <img src="secondlife-connect.png" alt="Secondlife-Connect">
+        <img src="secondlife-connect.png" alt="Secondlife-Connect Logo" onerror="this.src='fallback.png';"/>
       </a>
-      <h2>Secondlife-Connect
+      <h2>Secondlife-Connect</h2>
+      <p>Social Media for Your Second Life</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#whirl-win">
+        <img src="whirl.png" alt="Whirl-Win Logo" onerror="this.src='fallback.png';"/>
+      </a>
+      <h2>Whirl-Win</h2>
+      <p>Video Battle Platform – Illuminating the Truth + Slumerican Dirt Road</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#memesmith">
+        <img src="memesmith-logo.png" alt="MemeSmith Logo" onerror="this.src='fallback.png';"/>
+      </a>
+      <h2>MemeSmith</h2>
+      <p>High-Vibration Memes + AI Satire</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#recovery">
+        <img src="neuronix-recovery-ai.png" alt="Neuronix File Recovery AI" onerror="this.src='fallback.png';"/>
+      </a>
+      <h2>Neuronix Advanced A.I. File & Media Recovery</h2>
+      <p>Guided by Lyra</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#linguista">
+        <img src="linguista.png" alt="Linguista Logo" onerror="this.src='fallback.png';"/>
+      </a>
+      <h2>Linguista A.I.</h2>
+      <p>Contextual Translations</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#auto-ai">
+        <img src="auto-ai-systems.png" alt="Auto AI Systems Logo" onerror="this.src='fallback.png';"/>
+      </a>
+      <h2>Auto A.I. Business Solutions</h2>
+      <p>Modular Automation with Scalable Workflows</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#lyra">
+        <img src="lyra-guardian.png" alt="Lyra Guardian A.I. Logo" onerror="this.src='fallback.png';"/>
+      </a>
+      <h2>Lyra Guardian A.I.</h2>
+      <p>Autonomous Emotional Agent</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+  </div>
+</body>
+</html>
