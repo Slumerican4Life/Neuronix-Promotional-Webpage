@@ -1,26 +1,198 @@
-<!-- Main Neuronix logo -->
-<img src="neuronix-logo.png" alt="Neuronix Main Logo">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neuronix | Slumbucket Studios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black: #0a0a0a;
+      --deep-blue: #001f3f;
+      --light-blue: #3ec1d3;
+      --purple: #7f00ff;
+      --deep-red: #8b0000;
+      --light-red: #ff4c4c;
+      --pink: #ff69b4;
+      --green: #00ffcc;
+      --silver: #c0c0c0;
+      --gold: gold;
+      --platinum: #e5e4e2;
+      --neon-green: #39ff14;
+    }
 
-<!-- Advanced AI system -->
-<img src="auto-ai-systems.png" alt="Neuronix Advanced A.I. File & Media Recovery">
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, var(--deep-blue), var(--purple));
+      color: var(--silver);
+    }
 
-<!-- Linguista -->
-<img src="linguista.png" alt="Linguista">
+    header {
+      text-align: center;
+      padding: 2rem 1rem 0.5rem;
+      position: relative;
+      background: linear-gradient(to right, var(--deep-red), var(--purple));
+    }
 
-<!-- Lyra Guardian -->
-<img src="lyra-guardian.png" alt="Lyra Guardian">
+    header .studio-title {
+      font-size: 2rem;
+      color: var(--gold);
+      font-weight: bold;
+      text-shadow: 0 0 5px var(--gold), 0 0 10px var(--platinum);
+    }
 
-<!-- Recovery AI -->
-<img src="neuronix-recovery-ai.png" alt="Neuronix Recovery AI">
+    header .studio-title::before,
+    header .studio-title::after {
+      content: url("slumbucket-logo.png");
+      margin: 0 1rem;
+      vertical-align: middle;
+    }
 
-<!-- Secondlife Connect -->
-<img src="secondlife-connect.png" alt="Secondlife Connect">
+    .hero {
+      text-align: center;
+      padding: 1rem;
+    }
 
-<!-- Whirl -->
-<img src="whirl.png" alt="Whirl">
+    .hero img {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
 
-<!-- Memesmith -->
-<img src="memesmith-logo.png" alt="Memesmith">
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--silver);
+      margin-bottom: 0.5rem;
+    }
 
-<!-- Slumbucket Studios Logo -->
-<img src="slumbucket logo.png" alt="Slumbucket Studios Logo">
+    .click-invite {
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--neon-green);
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .project {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 1rem;
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .project h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--gold);
+      margin: 0.5rem 0;
+    }
+
+    .project p {
+      font-size: 0.9rem;
+      color: var(--silver);
+      margin: 0;
+    }
+
+    .click-invite-small {
+      font-size: 0.8rem;
+      font-style: italic;
+      color: var(--neon-green);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="studio-title">by: SLUMBUCKET STUDIOS</div>
+  </header>
+
+  <div class="hero">
+    <img src="neuronix-logo.png" alt="Neuronix Main Logo">
+    <h1>Neuronix</h1>
+    <div class="click-invite">click me, come inside ➤</div>
+  </div>
+
+  <div class="grid">
+    <div class="project">
+      <a href="#secondlife-connect">
+        <img src="secondlife-connect.png" alt="Secondlife-Connect">
+      </a>
+      <h2>Secondlife-Connect</h2>
+      <p>Social Media for Your Second Life</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#whirl-win">
+        <img src="whirl.png" alt="Whirl-Win">
+      </a>
+      <h2>Whirl-Win</h2>
+      <p>Video Battle Platform – Illuminating the Truth + Slumerican Dirt Road</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#memesmith">
+        <img src="memesmith-logo.png" alt="MemeSmith">
+      </a>
+      <h2>MemeSmith</h2>
+      <p>High-Vibration Memes + AI Satire</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#recovery">
+        <img src="neuronix-recovery-ai.png" alt="Neuronix Recovery AI">
+      </a>
+      <h2>Neuronix Advanced A.I. File & Media Recovery</h2>
+      <p>Guided by Lyra</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#linguista">
+        <img src="linguista.png" alt="Linguista">
+      </a>
+      <h2>Linguista A.I.</h2>
+      <p>Contextual Translations</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#auto-ai">
+        <img src="auto-ai-systems.png" alt="Auto AI Systems">
+      </a>
+      <h2>Auto A.I. Business Solutions</h2>
+      <p>Modular Automation with Scalable Workflows</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+
+    <div class="project">
+      <a href="#lyra">
+        <img src="lyra-guardian.png" alt="Lyra Guardian AI">
+      </a>
+      <h2>Lyra Guardian A.I.</h2>
+      <p>Autonomous Emotional Agent</p>
+      <div class="click-invite-small">click me, come inside ➤</div>
+    </div>
+  </div>
+</body>
+</html>
