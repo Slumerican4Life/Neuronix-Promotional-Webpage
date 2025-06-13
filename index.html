@@ -105,7 +105,7 @@
         /* --- PROJECTS GRID --- */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid */
             gap: 2.5rem;
             padding: 2rem 4rem;
         }
@@ -125,11 +125,12 @@
             box-shadow: 0 12px 24px rgba(138, 43, 226, 0.5);
         }
 
+        /* --- IMAGE SIZE INCREASED HERE --- */
         .project img {
             width: 100%;
-            max-width: 200px; /* Uniform image size */
-            height: 150px; /* Uniform image height */
-            object-fit: cover;
+            max-width: 280px; /* Increased from 200px */
+            height: 220px;    /* Increased from 150px */
+            object-fit: cover; /* Ensures images fill the space without distortion */
             border-radius: 10px;
             margin-bottom: 1.5rem;
             border: 2px solid var(--light-purple);
@@ -156,7 +157,7 @@
 <body>
     <header>
         <a href="#" class="header-logo">
-             <img src="slumbucket logo.jpg" alt="Slumbucket Fist Logo">
+            <img src="slumbucket logo.jpg" alt="Slumbucket Fist Logo">
         </a>
         <div class="studio-title">by: Slumbucket Studios</div>
         <a href="#" class="header-logo">
@@ -166,7 +167,7 @@
 
     <div class="hero">
         <a href="#">
-             <img src="Neuronix   two brains.jpg" alt="Neuronix Main Logo" class="hero-main-image">
+            <img src="Neuronix   two brains.jpg" alt="Neuronix Main Logo" class="hero-main-image">
             <h1>Neuronix</h1>
         </a>
     </div>
