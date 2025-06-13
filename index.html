@@ -1,164 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Neuronix | Slumbucket Studios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --black: #0a0a0a;
-      --deep-blue: #001f3f;
-      --light-blue: #3ec1d3;
-      --purple: #7f00ff;
-      --deep-red: #8b0000;
-      --light-red: #ff4c4c;
-      --pink: #ff69b4;
-      --green: #00ffcc;
-      --silver: #c0c0c0;
-      --gold: gold;
-      --platinum: #e5e4e2;
-      --neon-green: #39ff14;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Neuronix | Slumbucket Studios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --deep-blue: #0d001a;
+            --crisp-purple: #6a0dad;
+            --angry-purple: #8a2be2;
+            --light-blue: #87cefa;
+            --light-purple: #d1b3ff;
+            --deep-red: #8b0000;
+            --accent-gold: #ffd700;
+            --accent-silver: #c0c0c0;
+        }
 
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background: linear-gradient(135deg, var(--deep-blue), var(--purple));
-      color: var(--silver);
-    }
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background-color: var(--black);
+            color: var(--accent-silver);
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
 
-    header {
-      text-align: center;
-      padding: 2rem 1rem 0.5rem;
-      position: relative;
-      background: linear-gradient(to right, var(--deep-red), var(--purple));
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-    header .studio-title {
-      font-size: 2rem;
-      color: var(--gold);
-      font-weight: bold;
-      text-shadow: 0 0 5px var(--gold), 0 0 10px var(--platinum);
-    }
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(180deg, var(--deep-blue) 0%, rgba(0,0,0,0) 100%);
+            border-bottom: 1px solid var(--crisp-purple);
+        }
 
-    header .studio-title::before,
-    header .studio-title::after {
-      content: url("slumbucket-logo.png");
-      margin: 0 1rem;
-      vertical-align: middle;
-    }
+        .header-logo img {
+            width: 75px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
 
-    .hero {
-      text-align: center;
-      padding: 1rem;
-    }
+        .header-logo img:hover {
+            transform: scale(1.1);
+        }
 
-    .hero img {
-      width: 420px;
-      max-width: 90%;
-    }
+        .studio-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            color: var(--light-blue);
+            text-shadow: 0 0 5px var(--angry-purple), 0 0 10px var(--crisp-purple);
+            flex-grow: 1;
+            text-align: center;
+        }
 
-    .hero h1 {
-      font-size: 3rem;
-      color: var(--silver);
-      margin-bottom: 0.5rem;
-    }
+        /* --- HERO SECTION --- */
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+        }
 
-    .click-invite {
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--neon-green);
-      margin-bottom: 2rem;
-    }
+        .hero a {
+            display: inline-block;
+            text-align: center;
+        }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      padding: 2rem;
-    }
+        .hero-main-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 4px solid var(--crisp-purple);
+            box-shadow: 0 0 15px var(--angry-purple), 0 0 25px var(--deep-blue), inset 0 0 10px var(--deep-red);
+            transition: box-shadow 0.4s ease;
+        }
+        
+        .hero a:hover .hero-main-image {
+             box-shadow: 0 0 25px var(--light-purple), 0 0 45px var(--crisp-purple), inset 0 0 15px var(--deep-red);
+        }
 
-    .project {
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.3);
-      border-radius: 12px;
-      padding: 1rem;
-    }
+        .hero h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem); /* Responsive font size */
+            color: var(--accent-silver);
+            margin-top: 1rem;
+            text-shadow: 0 0 8px var(--light-purple), 0 0 15px var(--angry-purple);
+            transition: color 0.3s ease;
+        }
 
-    .project img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 12px;
-    }
+        .hero a:hover h1 {
+            color: var(--accent-gold);
+        }
+        
+        /* --- PROJECTS GRID --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 2.5rem;
+            padding: 2rem 4rem;
+        }
 
-    .project h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      color: var(--gold);
-      margin: 0.5rem 0;
-    }
+        .project {
+            text-align: center;
+            background: linear-gradient(145deg, var(--deep-blue), var(--crisp-purple));
+            border-radius: 15px;
+            padding: 2rem 1.5rem;
+            border: 1px solid var(--angry-purple);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-    .project p {
-      font-size: 0.9rem;
-      color: var(--silver);
-      margin: 0;
-    }
+        .project:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(138, 43, 226, 0.5);
+        }
 
-    .click-invite-small {
-      font-size: 0.8rem;
-      font-style: italic;
-      color: var(--neon-green);
-    }
-  </style>
+        .project img {
+            width: 100%;
+            max-width: 200px; /* Uniform image size */
+            height: 150px; /* Uniform image height */
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--light-purple);
+        }
+
+        .project h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin: 0.5rem 0;
+            text-shadow: 1px 1px 2px var(--black);
+        }
+
+        .project p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--accent-silver);
+            margin: 0;
+            min-height: 50px; /* Ensures alignment */
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="studio-title">by: SLUMBUCKET STUDIOS</div>
-  </header>
+    <header>
+        <a href="#" class="header-logo">
+             <img src="slumbucket logo.jpg" alt="Slumbucket Fist Logo">
+        </a>
+        <div class="studio-title">by: Slumbucket Studios</div>
+        <a href="#" class="header-logo">
+            <img src="slumbucket Studios brain bucket logo.jpg" alt="Slumbucket Brain Logo">
+        </a>
+    </header>
 
-  <div class="hero">
-    <img src="neuronix-logo.png" alt="Neuronix Main Logo">
-    <h1>Neuronix</h1>
-    <div class="click-invite">click me, come inside ➤</div>
-  </div>
+    <div class="hero">
+        <a href="#">
+             <img src="Neuronix   two brains.jpg" alt="Neuronix Main Logo" class="hero-main-image">
+            <h1>Neuronix</h1>
+        </a>
+    </div>
 
-  <div class="grid">
-    <div class="project">
-      <img src="linguista.png" alt="Linguista">
-      <h2>Linguista</h2>
-      <p>Contextual Website Translation AI</p>
+    <div class="grid">
+        <div class="project">
+            <a href="#">
+                <img src="memesmith-logo.jpg" alt="Memesmith">
+                <h2>Memesmith</h2>
+                <p>a.i. meme generator</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="#">
+                <img src="auto-ai-systems.jpg" alt="Auto A.I. Systems">
+                <h2>Auto A.I. Systems</h2>
+                <p>a modular ai business automation system with scalable workflows</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="#">
+                <img src="secondlife-connect.jpg" alt="Secondlife Connect">
+                <h2>Secondlife Connect</h2>
+                <p>Marketplace gesture shop with smart management</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="#">
+                <img src="whirl.png" alt="Whirl-Win Video Battle">
+                <h2>Whirl-Win</h2>
+                <p>Video battles, custom avatars, live tipping</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="#">
+                <img src="ai file recovery logo.jpg" alt="Neuronix Advanced A.I. File & Media Recovery">
+                <h2>Neuronix Recovery A.I.</h2>
+                <p>neuroxin ai file and media recovery system</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="#">
+                <img src="lyra-guardian.png.jpg" alt="Lyra Guardian AI">
+                <h2>Lyra Guardian A.I.</h2>
+                <p>lyra guardian autonomous ai agent</p>
+            </a>
+        </div>
     </div>
-    <div class="project">
-      <img src="auto-ai-systems.png" alt="Auto A.I. Systems">
-      <h2>Auto A.I. Systems</h2>
-      <p>Modular Business Automation Dashboards</p>
-    </div>
-    <div class="project">
-      <img src="neuronix-recovery-ai.png" alt="Neuronix Advanced A.I. File & Media Recovery">
-      <h2>Neuronix Recovery A.I.</h2>
-      <p>Guided by Lyra. File & media restoration.</p>
-    </div>
-    <div class="project">
-      <img src="lyra-guardian.png" alt="Lyra Guardian AI">
-      <h2>Lyra Guardian A.I.</h2>
-      <p>Security and digital protection, ride-or-die.</p>
-    </div>
-    <div class="project">
-      <img src="memesmith-logo.png" alt="MemeSmith">
-      <h2>MemeSmith</h2>
-      <p>Smart meme generation and viral punchlines</p>
-    </div>
-    <div class="project">
-      <img src="secondlife-connect.png" alt="Secondlife Connect">
-      <h2>Secondlife Connect</h2>
-      <p>Marketplace gesture shop with smart management</p>
-    </div>
-    <div class="project">
-      <img src="whirl.png" alt="Whirl-Win Video Battle">
-      <h2>Whirl-Win</h2>
-      <p>Video battles, custom avatars, live tipping</p>
-    </div>
-  </div>
 </body>
 </html>
